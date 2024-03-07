@@ -1,0 +1,6 @@
+System.IO.DirectoryNotFoundException: No se puede encontrar una parte de la ruta de acceso 'C:\Users\sonmu\Desktop\Proyectos\Semi2\[SS2]Proyecto_202003894\ArchivosEntradaSG\SqlSever'.
+   en System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   en System.IO.FileSystemEnumerableIterator`1.CommonInit()
+   en System.IO.FileSystemEnumerableIterator`1..ctor(String path, String originalUserPath, String searchPattern, SearchOption searchOption, SearchResultHandler`1 resultHandler, Boolean checkHost)
+   en System.IO.Directory.GetFiles(String path, String searchPattern)
+   en ST_2278fe6a7f474e3ea021ab2201c9e623.ScriptMain.Main()

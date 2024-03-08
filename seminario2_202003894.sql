@@ -5,10 +5,9 @@ drop table factCompra;
 drop table factVenta;
 drop table dimFecha;
 drop table dimCliente;
-drop table dimDepartamento;
+drop table dimUbicacion;
 drop table dimProducto;
 drop table dimProveedor;
-drop table dimRegion;
 drop table dimSucursal;
 drop table dimVendedor;
 
@@ -45,9 +44,9 @@ departamento varchar(70)
 
 create table dimSucursal(
 idSucursal int identity(1,1) primary key,
-idDepa int,
-idRegion int,
 codSucursal varchar(10),
+nombreSucursal varchar(150),
+dirSucursal varchar(150),
 );
 
 create table factCompra(
@@ -100,12 +99,12 @@ foreign key (idSucursal) references dimSucursal(idSucursal),
 foreign key (idUbicacion) references dimUbicacion(idUbicacion)
 );
 
-select * from dimFecha order by anio desc;
-select * from dimProveedor;
-select * from dimProducto;
-select * from dimUbicacion;
-select * from dimSucursal;
-select * from factCompra;
-select * from dimVendedor;
-select * from dimCliente;
-select * from factVenta;
+select count(*) from dimFecha;
+select count(*) from dimProveedor;
+select count(*) from dimProducto;
+select count(*) from dimUbicacion;
+select count(*) from dimSucursal;
+select count(*) from dimVendedor;
+select count(*) from dimCliente;
+select count(*) from factVenta;
+select count(*) from factCompra;
